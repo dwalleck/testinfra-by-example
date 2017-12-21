@@ -53,6 +53,7 @@ def test_socket_statuses(host):
 
 
 def test_service_statuses(host):
+    # Won't work when the test host is a Docker container
     host.service('ssh').is_enabled
     host.service('ssh').is_running
 
@@ -62,16 +63,6 @@ def test_file_checks(host):
     pass
 
 
-def test_file_checks(host):
-    # (TODO): implement
-    pass
-
-
 def test_process_checks(host):
-    # (TODO): implement
-    pass
-
-
-def test_socket_checks(host):
     # (TODO): implement
     pass
